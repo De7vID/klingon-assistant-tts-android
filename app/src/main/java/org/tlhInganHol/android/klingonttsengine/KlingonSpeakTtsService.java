@@ -16,7 +16,6 @@
 package org.tlhInganHol.android.klingonttsengine;
 
 import android.annotation.TargetApi;
-import android.content.Context;
 import android.media.AudioFormat;
 import android.media.MediaPlayer;
 import android.speech.tts.SynthesisCallback;
