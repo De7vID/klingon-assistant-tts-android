@@ -17,6 +17,8 @@
 
     <!-- The name of the application. -->
     <string name="app_name">Klingon Text-To-Speech (TTS) Engine</string>
-    <!-- The heading of the first (and only) preference fragment -->
+
+    <!-- The string to display in the text selection context menu. -->
+    <string name="action_process_text">Read Klingon text</string>
 
 </resources>
