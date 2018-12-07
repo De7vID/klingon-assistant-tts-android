@@ -6,15 +6,15 @@ keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "25.0.3"
+    buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "org.tlhInganHol.android.klingonttsengine"
         // SDK 16 is needed for gapless playback using setNextMediaPlayer.
         // SDK 23 is not backwards compatible in terms of permissions, so a version needs to be compiled for minSdkVersion and targetSdkVersion 23.
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 25
-        versionName "2018.04.10"
+        versionCode 26
+        versionName "2018.12.06"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

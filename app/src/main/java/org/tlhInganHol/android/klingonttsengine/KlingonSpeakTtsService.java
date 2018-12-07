@@ -179,6 +179,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("Qu", R.raw.audio_ku);
         initMap.put("lu", R.raw.audio_lu);
         initMap.put("ma", R.raw.audio_ma);
+        initMap.put("na", R.raw.audio_na);
         initMap.put("oy", R.raw.audio_oy);
         initMap.put("po", R.raw.audio_po);
         initMap.put("qo", R.raw.audio_qo);
@@ -190,6 +191,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("va", R.raw.audio_va);
         initMap.put("vo", R.raw.audio_vo);
         initMap.put("ya", R.raw.audio_ya);
+        initMap.put("yo", R.raw.audio_yo);
         initMap.put("yu", R.raw.audio_yu);
         initMap.put("za", R.raw.audio_za);
         initMap.put("zo", R.raw.audio_zo);
@@ -225,6 +227,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("baQ", R.raw.audio_bak);
         initMap.put("bal", R.raw.audio_bal);
         initMap.put("bam", R.raw.audio_bam);
+        initMap.put("ban", R.raw.audio_ban);
         initMap.put("baq", R.raw.audio_baq);
         initMap.put("bar", R.raw.audio_bar);
         initMap.put("barG", R.raw.audio_barg);
@@ -249,6 +252,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("ber", R.raw.audio_ber);
         initMap.put("berG", R.raw.audio_berg);
         initMap.put("bet", R.raw.audio_bet);
+        initMap.put("bew", R.raw.audio_bew);
         initMap.put("bey", R.raw.audio_bey);
         initMap.put("beyz", R.raw.audio_beyz);
         initMap.put("bez", R.raw.audio_bez);
@@ -265,6 +269,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("bIS", R.raw.audio_bis);
         initMap.put("bIt", R.raw.audio_bit);
         initMap.put("bIv", R.raw.audio_biv);
+        initMap.put("bIx", R.raw.audio_bix);
         initMap.put("bIz", R.raw.audio_biz);
         initMap.put("bob", R.raw.audio_bob);
         initMap.put("boC", R.raw.audio_boc);
@@ -322,6 +327,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("Caz", R.raw.audio_caz);
         initMap.put("Ceb", R.raw.audio_ceb);
         initMap.put("CeC", R.raw.audio_cec);
+        initMap.put("CeD", R.raw.audio_ced);
         initMap.put("CeF", R.raw.audio_cef);
         initMap.put("CeG", R.raw.audio_ceg);
         initMap.put("CeH", R.raw.audio_ceh);
@@ -472,8 +478,10 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("Faj", R.raw.audio_faj);
         initMap.put("FaQ", R.raw.audio_fak);
         initMap.put("Fal", R.raw.audio_fal);
+        initMap.put("Fam", R.raw.audio_fam);
         initMap.put("Fan", R.raw.audio_fan);
         initMap.put("Faq", R.raw.audio_faq);
+        initMap.put("Far", R.raw.audio_far);
         initMap.put("FaS", R.raw.audio_fas);
         initMap.put("Fat", R.raw.audio_fat);
         initMap.put("Fav", R.raw.audio_fav);
@@ -491,6 +499,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("FeQ", R.raw.audio_fek);
         initMap.put("Fel", R.raw.audio_fel);
         initMap.put("Fem", R.raw.audio_fem);
+        initMap.put("Fen", R.raw.audio_fen);
         initMap.put("Fep", R.raw.audio_fep);
         initMap.put("Fer", R.raw.audio_fer);
         initMap.put("Fev", R.raw.audio_fev);
@@ -505,6 +514,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("FIq", R.raw.audio_fiq);
         initMap.put("FIS", R.raw.audio_fis);
         initMap.put("FIv", R.raw.audio_fiv);
+        initMap.put("FIx", R.raw.audio_fix);
         initMap.put("FIz", R.raw.audio_fiz);
         initMap.put("FoC", R.raw.audio_foc);
         initMap.put("FoD", R.raw.audio_fod);
@@ -524,6 +534,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("Foyz", R.raw.audio_foyz);
         initMap.put("Foz", R.raw.audio_foz);
         initMap.put("FuG", R.raw.audio_fug);
+        initMap.put("FuH", R.raw.audio_fuh);
         initMap.put("Fuj", R.raw.audio_fuj);
         initMap.put("Fun", R.raw.audio_fun);
         initMap.put("Fup", R.raw.audio_fup);
@@ -557,6 +568,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("Geb", R.raw.audio_geb);
         initMap.put("GeD", R.raw.audio_ged);
         initMap.put("GeG", R.raw.audio_geg);
+        initMap.put("GeH", R.raw.audio_geh);
         initMap.put("Gel", R.raw.audio_gel);
         initMap.put("Gem", R.raw.audio_gem);
         initMap.put("Gen", R.raw.audio_gen);
@@ -566,6 +578,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("Get", R.raw.audio_get);
         initMap.put("Gev", R.raw.audio_gev);
         initMap.put("Gew", R.raw.audio_gew);
+        initMap.put("Gey", R.raw.audio_gey);
         initMap.put("Gez", R.raw.audio_gez);
         initMap.put("GIb", R.raw.audio_gib);
         initMap.put("GIC", R.raw.audio_gic);
@@ -636,6 +649,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("HarG", R.raw.audio_harg);
         initMap.put("HaS", R.raw.audio_has);
         initMap.put("Hat", R.raw.audio_hat);
+        initMap.put("Hav", R.raw.audio_hav);
         initMap.put("Hawz", R.raw.audio_hawz);
         initMap.put("Hax", R.raw.audio_hax);
         initMap.put("Hay", R.raw.audio_hay);
@@ -648,6 +662,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("HeH", R.raw.audio_heh);
         initMap.put("Hej", R.raw.audio_hej);
         initMap.put("HeQ", R.raw.audio_hek);
+        initMap.put("Hel", R.raw.audio_hel);
         initMap.put("Hem", R.raw.audio_hem);
         initMap.put("Hen", R.raw.audio_hen);
         initMap.put("Heq", R.raw.audio_heq);
@@ -663,6 +678,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("HIj", R.raw.audio_hij);
         initMap.put("HIp", R.raw.audio_hip);
         initMap.put("HIq", R.raw.audio_hiq);
+        initMap.put("HIr", R.raw.audio_hir);
         initMap.put("HIS", R.raw.audio_his);
         initMap.put("HIv", R.raw.audio_hiv);
         initMap.put("HIz", R.raw.audio_hiz);
@@ -702,6 +718,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("Hut", R.raw.audio_hut);
         initMap.put("Huv", R.raw.audio_huv);
         initMap.put("Hux", R.raw.audio_hux);
+        initMap.put("Huy", R.raw.audio_huy);
         initMap.put("Huyz", R.raw.audio_huyz);
         initMap.put("Huz", R.raw.audio_huz);
         initMap.put("jab", R.raw.audio_jab);
@@ -753,6 +770,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("jIp", R.raw.audio_jip);
         initMap.put("jIq", R.raw.audio_jiq);
         initMap.put("jIr", R.raw.audio_jir);
+        initMap.put("jIt", R.raw.audio_jit);
         initMap.put("jIv", R.raw.audio_jiv);
         initMap.put("jIy", R.raw.audio_jiy);
         initMap.put("jIz", R.raw.audio_jiz);
@@ -782,6 +800,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("jum", R.raw.audio_jum);
         initMap.put("jun", R.raw.audio_jun);
         initMap.put("jup", R.raw.audio_jup);
+        initMap.put("jur", R.raw.audio_jur);
         initMap.put("juS", R.raw.audio_jus);
         initMap.put("juv", R.raw.audio_juv);
         initMap.put("Qab", R.raw.audio_kab);
@@ -852,10 +871,12 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("Qov", R.raw.audio_kov);
         initMap.put("Qox", R.raw.audio_kox);
         initMap.put("Qoy", R.raw.audio_koy);
+        initMap.put("Qoyz", R.raw.audio_koyz);
         initMap.put("Qoz", R.raw.audio_koz);
         initMap.put("Qub", R.raw.audio_kub);
         initMap.put("QuC", R.raw.audio_kuc);
         initMap.put("QuD", R.raw.audio_kud);
+        initMap.put("QuF", R.raw.audio_kuf);
         initMap.put("QuG", R.raw.audio_kug);
         initMap.put("Quj", R.raw.audio_kuj);
         initMap.put("QuQ", R.raw.audio_kuk);
@@ -915,6 +936,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("lIG", R.raw.audio_lig);
         initMap.put("lIH", R.raw.audio_lih);
         initMap.put("lIj", R.raw.audio_lij);
+        initMap.put("lIQ", R.raw.audio_lik);
         initMap.put("lIl", R.raw.audio_lil);
         initMap.put("lIm", R.raw.audio_lim);
         initMap.put("lIn", R.raw.audio_lin);
@@ -986,6 +1008,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("maz", R.raw.audio_maz);
         initMap.put("meb", R.raw.audio_meb);
         initMap.put("meC", R.raw.audio_mec);
+        initMap.put("meD", R.raw.audio_med);
         initMap.put("meF", R.raw.audio_mef);
         initMap.put("meG", R.raw.audio_meg);
         initMap.put("meH", R.raw.audio_meh);
@@ -1090,6 +1113,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("nem", R.raw.audio_nem);
         initMap.put("nen", R.raw.audio_nen);
         initMap.put("nep", R.raw.audio_nep);
+        initMap.put("neq", R.raw.audio_neq);
         initMap.put("neS", R.raw.audio_nes);
         initMap.put("net", R.raw.audio_net);
         initMap.put("nev", R.raw.audio_nev);
@@ -1154,6 +1178,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("paj", R.raw.audio_paj);
         initMap.put("paQ", R.raw.audio_pak);
         initMap.put("pal", R.raw.audio_pal);
+        initMap.put("pam", R.raw.audio_pam);
         initMap.put("pan", R.raw.audio_pan);
         initMap.put("paq", R.raw.audio_paq);
         initMap.put("paqz", R.raw.audio_paqz);
@@ -1222,6 +1247,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("poS", R.raw.audio_pos);
         initMap.put("pov", R.raw.audio_pov);
         initMap.put("pox", R.raw.audio_pox);
+        initMap.put("poy", R.raw.audio_poy);
         initMap.put("poz", R.raw.audio_poz);
         initMap.put("pub", R.raw.audio_pub);
         initMap.put("puC", R.raw.audio_puc);
@@ -1232,6 +1258,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("puQ", R.raw.audio_puk);
         initMap.put("pul", R.raw.audio_pul);
         initMap.put("pum", R.raw.audio_pum);
+        initMap.put("pun", R.raw.audio_pun);
         initMap.put("pup", R.raw.audio_pup);
         initMap.put("puq", R.raw.audio_puq);
         initMap.put("pur", R.raw.audio_pur);
@@ -1253,6 +1280,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("qaq", R.raw.audio_qaq);
         initMap.put("qar", R.raw.audio_qar);
         initMap.put("qarD", R.raw.audio_qard);
+        initMap.put("qarG", R.raw.audio_qarg);
         initMap.put("qaS", R.raw.audio_qas);
         initMap.put("qat", R.raw.audio_qat);
         initMap.put("qav", R.raw.audio_qav);
@@ -1274,12 +1302,14 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("qen", R.raw.audio_qen);
         initMap.put("qep", R.raw.audio_qep);
         initMap.put("qeq", R.raw.audio_qeq);
+        initMap.put("qer", R.raw.audio_qer);
         initMap.put("qeS", R.raw.audio_qes);
         initMap.put("qet", R.raw.audio_qet);
         initMap.put("qev", R.raw.audio_qev);
         initMap.put("qew", R.raw.audio_qew);
         initMap.put("qex", R.raw.audio_qex);
         initMap.put("qey", R.raw.audio_qey);
+        initMap.put("qeyz", R.raw.audio_qeyz);
         initMap.put("qez", R.raw.audio_qez);
         initMap.put("qIb", R.raw.audio_qib);
         initMap.put("qIC", R.raw.audio_qic);
@@ -1393,6 +1423,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("rIx", R.raw.audio_rix);
         initMap.put("rIy", R.raw.audio_riy);
         initMap.put("rIz", R.raw.audio_riz);
+        initMap.put("rob", R.raw.audio_rob);
         initMap.put("roD", R.raw.audio_rod);
         initMap.put("roG", R.raw.audio_rog);
         initMap.put("roH", R.raw.audio_roh);
@@ -1439,6 +1470,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("Sar", R.raw.audio_sar);
         initMap.put("SarG", R.raw.audio_sarg);
         initMap.put("SaS", R.raw.audio_sas);
+        initMap.put("Sat", R.raw.audio_sat);
         initMap.put("Saw", R.raw.audio_saw);
         initMap.put("Sawz", R.raw.audio_sawz);
         initMap.put("Sax", R.raw.audio_sax);
@@ -1585,6 +1617,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("toH", R.raw.audio_toh);
         initMap.put("toj", R.raw.audio_toj);
         initMap.put("toQ", R.raw.audio_tok);
+        initMap.put("tom", R.raw.audio_tom);
         initMap.put("ton", R.raw.audio_ton);
         initMap.put("top", R.raw.audio_top);
         initMap.put("toq", R.raw.audio_toq);
@@ -1631,11 +1664,13 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("vaS", R.raw.audio_vas);
         initMap.put("vat", R.raw.audio_vat);
         initMap.put("vav", R.raw.audio_vav);
+        initMap.put("vaw", R.raw.audio_vaw);
         initMap.put("vax", R.raw.audio_vax);
         initMap.put("vay", R.raw.audio_vay);
         initMap.put("vayz", R.raw.audio_vayz);
         initMap.put("vaz", R.raw.audio_vaz);
         initMap.put("veb", R.raw.audio_veb);
+        initMap.put("veC", R.raw.audio_vec);
         initMap.put("veD", R.raw.audio_ved);
         initMap.put("veF", R.raw.audio_vef);
         initMap.put("veG", R.raw.audio_veg);
@@ -1661,6 +1696,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("vIG", R.raw.audio_vig);
         initMap.put("vIH", R.raw.audio_vih);
         initMap.put("vIj", R.raw.audio_vij);
+        initMap.put("vIQ", R.raw.audio_vik);
         initMap.put("vIl", R.raw.audio_vil);
         initMap.put("vIn", R.raw.audio_vin);
         initMap.put("vIp", R.raw.audio_vip);
@@ -1778,8 +1814,10 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("xaG", R.raw.audio_xag);
         initMap.put("xaQ", R.raw.audio_xak);
         initMap.put("xam", R.raw.audio_xam);
+        initMap.put("xan", R.raw.audio_xan);
         initMap.put("xap", R.raw.audio_xap);
         initMap.put("xaq", R.raw.audio_xaq);
+        initMap.put("xar", R.raw.audio_xar);
         initMap.put("xarG", R.raw.audio_xarg);
         initMap.put("xaS", R.raw.audio_xas);
         initMap.put("xat", R.raw.audio_xat);
@@ -1854,6 +1892,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("yayz", R.raw.audio_yayz);
         initMap.put("yaz", R.raw.audio_yaz);
         initMap.put("yeb", R.raw.audio_yeb);
+        initMap.put("yeC", R.raw.audio_yec);
         initMap.put("yeG", R.raw.audio_yeg);
         initMap.put("yej", R.raw.audio_yej);
         initMap.put("yem", R.raw.audio_yem);
@@ -1873,6 +1912,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("yIS", R.raw.audio_yis);
         initMap.put("yIt", R.raw.audio_yit);
         initMap.put("yIv", R.raw.audio_yiv);
+        initMap.put("yIx", R.raw.audio_yix);
         initMap.put("yIz", R.raw.audio_yiz);
         initMap.put("yob", R.raw.audio_yob);
         initMap.put("yoD", R.raw.audio_yod);
@@ -1926,6 +1966,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("zaw", R.raw.audio_zaw);
         initMap.put("zawz", R.raw.audio_zawz);
         initMap.put("zax", R.raw.audio_zax);
+        initMap.put("zay", R.raw.audio_zay);
         initMap.put("zayz", R.raw.audio_zayz);
         initMap.put("zaz", R.raw.audio_zaz);
         initMap.put("zeb", R.raw.audio_zeb);
@@ -1950,6 +1991,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("zey", R.raw.audio_zey);
         initMap.put("zez", R.raw.audio_zez);
         initMap.put("zIb", R.raw.audio_zib);
+        initMap.put("zIC", R.raw.audio_zic);
         initMap.put("zID", R.raw.audio_zid);
         initMap.put("zIG", R.raw.audio_zig);
         initMap.put("zIH", R.raw.audio_zih);
@@ -1992,6 +2034,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("zub", R.raw.audio_zub);
         initMap.put("zuC", R.raw.audio_zuc);
         initMap.put("zuD", R.raw.audio_zud);
+        initMap.put("zuF", R.raw.audio_zuf);
         initMap.put("zuG", R.raw.audio_zug);
         initMap.put("zuH", R.raw.audio_zuh);
         initMap.put("zuj", R.raw.audio_zuj);
@@ -2000,6 +2043,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         initMap.put("zum", R.raw.audio_zum);
         initMap.put("zun", R.raw.audio_zun);
         initMap.put("zup", R.raw.audio_zup);
+        initMap.put("zuq", R.raw.audio_zuq);
         initMap.put("zur", R.raw.audio_zur);
         initMap.put("zurG", R.raw.audio_zurg);
         initMap.put("zuS", R.raw.audio_zus);
