@@ -21,4 +21,7 @@
     <!-- The string to display in the text selection context menu. -->
     <string name="action_process_text">Read Klingon text</string>
 
+    <!-- The toast to display for missing syllables. -->
+    <string name="missing_syllable">Unable to produce syllable: {%1$s}.</string>
+
 </resources>

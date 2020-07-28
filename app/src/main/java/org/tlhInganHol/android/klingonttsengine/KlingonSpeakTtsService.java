@@ -24,6 +24,7 @@ import android.speech.tts.TextToSpeech;
 import android.speech.tts.TextToSpeechService;
 import android.speech.tts.Voice;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -2218,8 +2219,14 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         }
     }
 
-    private void prependCoughToList() {
+    private void prependCoughToList(String missingSyllable) {
         prependSyllableToList(R.raw.audio_cough);
+        Toast.makeText(
+            this,
+            String.format(
+                getResources().getString(R.string.missing_syllable),
+                restoreKlingonDiTrigraphs(missingSyllable)),
+            Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -2309,7 +2316,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
                             prependSyllableToList(frontResId);
                             Log.d(TAG, "Matched syllable: {" + syllableFront + "-}");
                         } else {
-                            prependCoughToList();
+                            prependCoughToList(syllableFront + "-");
                         }
                     } else {
                         // Either it's not short, or it's short and final. So play audio for the
@@ -2338,7 +2345,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
                                   prependSyllableToList(getResIdForFallbackChar(backConsonants.charAt(0)));
                                 } else {
                                   // There was a consonant cluster (-rgh, -w', -y'), can't fake it.
-                                  prependCoughToList();
+                                  prependCoughToList(syllable);
                                   coughed = true;
                                 }
                             }
@@ -2346,7 +2353,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
                                 prependSyllableToList(frontResId);
                             } else if (!coughed) {
                                 // Cough only once if both parts are missing.
-                                prependCoughToList();
+                                prependCoughToList(syllable);
                             }
                             Log.d(TAG, "Matched syllable: {" + syllableFront + "-" + syllableBack + "}");
                         }
@@ -2543,6 +2550,17 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
                     .replaceAll("ng", "F")
                     .replaceAll("tlh", "x")
                     .replaceAll("'", "z");
+    }
+
+    /*
+     * Undo the above. Needed only for the error message.
+     */
+    private static String restoreKlingonDiTrigraphs(String input) {
+        return input.replaceAll("'", "z")
+                    .replaceAll("tlh", "x")
+                    .replaceAll("ng", "F")
+                    .replaceAll("gh", "G")
+                    .replaceAll("ch", "C");
     }
 
     private void beginPlayback() {
