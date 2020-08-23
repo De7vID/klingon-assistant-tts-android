@@ -16,7 +16,9 @@
 package org.tlhInganHol.android.klingonttsengine;
 
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.media.AudioFormat;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.speech.tts.SynthesisCallback;
 import android.speech.tts.SynthesisRequest;
@@ -2603,6 +2605,14 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         // one is active).
         if (mStopRequested || mMediaPlayer == null) {
             return;
+        }
+
+        // Warn user if audio is mute (device is on silent or vibrate).
+        AudioManager audioManager =
+            (AudioManager) getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
+        if (audioManager.getStreamVolume(AudioManager.STREAM_MUSIC) == 0) {
+            Toast.makeText(
+                this, getResources().getString(R.string.audio_is_mute), Toast.LENGTH_LONG).show();
         }
 
         // This starts the chain of playback.
