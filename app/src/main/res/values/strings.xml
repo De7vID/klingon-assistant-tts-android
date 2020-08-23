@@ -24,4 +24,7 @@
     <!-- The toast to display for missing syllables. -->
     <string name="missing_syllable">Unable to produce syllable: {%1$s}.</string>
 
+    <!-- The toast to display if the audio volume is mute. -->
+    <string name="audio_is_mute">Warning: audio is mute.</string>
+
 </resources>
