@@ -11,7 +11,7 @@ android {
         // SDK 16 is needed for gapless playback using setNextMediaPlayer.
         // SDK 23 is not backwards compatible in terms of permissions.
         minSdkVersion 23
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 34
         versionName "2023.04.22"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
