@@ -33,7 +33,7 @@ public class CheckVoiceData extends Activity {
     private static final String TAG = "CheckVoiceData";
 
     // For now, we don't have a set of voices for "tlh-USA".
-    private static final String[] SUPPORTED_LANGUAGES = { "tlh-CAN" };
+    private static final String[] SUPPORTED_LANGUAGES = {"tlh-CAN"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

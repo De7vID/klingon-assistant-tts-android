@@ -23,6 +23,7 @@ import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
 import android.view.Menu;
+
 import java.util.Locale;
 
 public class ProcessText extends Activity {
@@ -47,49 +48,51 @@ public class ProcessText extends Activity {
 
     // The async TTS task.
     private class TTSTask extends AsyncTask<Void, Void, Void> implements TextToSpeech.OnInitListener {
-      private static final String TAG = "TTSTask";
+        private static final String TAG = "TTSTask";
 
-      private TextToSpeech mTts;
+        private TextToSpeech mTts;
 
-      @Override
-      protected Void doInBackground(Void... params) {
-        mTts = new TextToSpeech(getApplicationContext(), this, "org.tlhInganHol.android.klingonttsengine");
-        return null;
-      }
-
-      // TTS:
-      public void onInit(int status) {
-        if (status == TextToSpeech.SUCCESS) {
-          mTts.setLanguage(new Locale("tlh", "", ""));
-          Log.d(TAG, "setLanguage called.");
-
-          mTts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-            @Override
-            public void onDone(String id) {
-              Log.d(TAG, "onDone: " + id);
-              if (mTts != null) {
-                mTts.stop();
-                mTts.shutdown();
-              }
-            }
-            @Override
-            public void onStart(String id) {
-              Log.d(TAG, "onStart: " + id);
-            }
-            @Override
-            public void onError(String id) {
-              Log.d(TAG, "onError: " + id);
-            }
-          });
-
-          String id = this.hashCode() + "";
-          Bundle bundle = new Bundle();
-          bundle.putString(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "");
-          mTts.speak(mText, TextToSpeech.QUEUE_FLUSH, bundle, id);
-
-          Log.d(TAG, "speak called with: \"" + mText + "\"");
+        @Override
+        protected Void doInBackground(Void... params) {
+            mTts = new TextToSpeech(getApplicationContext(), this, "org.tlhInganHol.android.klingonttsengine");
+            return null;
         }
-      }
+
+        // TTS:
+        public void onInit(int status) {
+            if (status == TextToSpeech.SUCCESS) {
+                mTts.setLanguage(new Locale("tlh", "", ""));
+                Log.d(TAG, "setLanguage called.");
+
+                mTts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                    @Override
+                    public void onDone(String id) {
+                        Log.d(TAG, "onDone: " + id);
+                        if (mTts != null) {
+                            mTts.stop();
+                            mTts.shutdown();
+                        }
+                    }
+
+                    @Override
+                    public void onStart(String id) {
+                        Log.d(TAG, "onStart: " + id);
+                    }
+
+                    @Override
+                    public void onError(String id) {
+                        Log.d(TAG, "onError: " + id);
+                    }
+                });
+
+                String id = this.hashCode() + "";
+                Bundle bundle = new Bundle();
+                bundle.putString(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "");
+                mTts.speak(mText, TextToSpeech.QUEUE_FLUSH, bundle, id);
+
+                Log.d(TAG, "speak called with: \"" + mText + "\"");
+            }
+        }
 
     }
 }
