@@ -40,8 +40,8 @@ import java.util.Map;
 /**
  * A text to speech engine that generates Klingon speech.
  * The engine supports two different Klingon voices.
- *
- * It exercises all aspects of the Text to speech engine API
+ * <p>
+ * It exercises all aspects of the Text to speech engine API.
  * {@link android.speech.tts.TextToSpeechService}.
  */
 public class KlingonSpeakTtsService extends TextToSpeechService implements android.media.MediaPlayer.OnCompletionListener {
@@ -55,6 +55,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
 
     // This map contains the front half of full syllables.
     private static final Map<String, Integer> FRONT_HALF_SYLLABLE_TO_AUDIO_MAP;
+
     static {
         Map<String, Integer> initMap = new HashMap<String, Integer>();
 
@@ -162,6 +163,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
     // doesn't end abruptly. For example, "Da-" (a front half syllable) is the prefix for "you-it",
     // whereas "Da" (a short syllable) is the verb for "behave as".
     private static final Map<String, Integer> SHORT_SYLLABLE_TO_AUDIO_MAP;
+
     static {
         Map<String, Integer> initMap = new HashMap<String, Integer>();
         // bo, cha, Da, DI, Do, gho, ghu, He, Hu, ja, je, jo, lu, po, QI, ra, ro, So, ta, tI, va, ya, yu, 'a, 'o
@@ -225,6 +227,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
     // syllables by concatenating the front and back parts, as there is a noticeable discontinuity
     // in the audio if the vowel sound is not perfectly matched.
     private static final Map<String, Integer> BACK_HALF_SYLLABLE_TO_AUDIO_MAP;
+
     static {
         Map<String, Integer> initMap = new HashMap<String, Integer>();
         // -a, -e, -I, -o, -u
@@ -234,6 +237,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
 
     // This map contains full syllables, i.e., those of the form CVC, CVrgh, or CV[wy]'.
     private static final Map<String, Integer> MAIN_SYLLABLE_TO_AUDIO_MAP;
+
     static {
         Map<String, Integer> initMap = new HashMap<String, Integer>();
 
@@ -2287,7 +2291,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
             }
         }
 
-        mCurrentLanguage = new String[] { lang, loadCountry, "" };
+        mCurrentLanguage = new String[]{lang, loadCountry, ""};
 
         // The return value here must be consistent with onIsLanguageAvailable and onLoadVoice.
         return isLanguageAvailable;
@@ -2321,16 +2325,16 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
     private void prependCoughToList(String missingSyllable) {
         prependSyllableToList(R.raw.audio_cough);
         Toast.makeText(
-            this,
-            String.format(
-                getResources().getString(R.string.missing_syllable),
-                restoreKlingonDiTrigraphs(missingSyllable)),
-            Toast.LENGTH_LONG).show();
+                this,
+                String.format(
+                        getResources().getString(R.string.missing_syllable),
+                        restoreKlingonDiTrigraphs(missingSyllable)),
+                Toast.LENGTH_LONG).show();
     }
 
     @Override
     protected synchronized void onSynthesizeText(SynthesisRequest request,
-            SynthesisCallback callback) {
+                                                 SynthesisCallback callback) {
         // Note that we call onLoadLanguage here since there is no guarantee
         // that there would have been a prior call to this function.
         int load = onLoadLanguage(request.getLanguage(), request.getCountry(),
@@ -2354,9 +2358,9 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         String requestedText = request.getText();
         String condensedText;
         if (requestedText.toLowerCase().contains("example")) {
-          condensedText = "QIC luCenmoHluztazboG zaGluzmeH Covnaxvam nobluz";
+            condensedText = "QIC luCenmoHluztazboG zaGluzmeH Covnaxvam nobluz";
         } else {
-          condensedText = condenseKlingonDiTrigraphs(requestedText);
+            condensedText = condenseKlingonDiTrigraphs(requestedText);
         }
         // We construct a list of syllables to be played.
         Log.d(TAG, "---\n");
@@ -2439,13 +2443,13 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
                             } else {
                                 String backConsonants = syllableBack.substring(vowel.length());
                                 if (backConsonants.length() == 1) {
-                                  // This should be avoided, but if there is no choice, say the
-                                  // consonant by itself. It won't sound smooth.
-                                  prependSyllableToList(getResIdForFallbackChar(backConsonants.charAt(0)));
+                                    // This should be avoided, but if there is no choice, say the
+                                    // consonant by itself. It won't sound smooth.
+                                    prependSyllableToList(getResIdForFallbackChar(backConsonants.charAt(0)));
                                 } else {
-                                  // There was a consonant cluster (-rgh, -w', -y'), can't fake it.
-                                  prependCoughToList(syllable);
-                                  coughed = true;
+                                    // There was a consonant cluster (-rgh, -w', -y'), can't fake it.
+                                    prependCoughToList(syllable);
+                                    coughed = true;
                                 }
                             }
                             if (frontResId != null) {
@@ -2543,7 +2547,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
 
         // Look for the vowel.
         if (remainingText.length() < 2 ||
-            !isSimpleVowel(remainingText.charAt(remainingText.length() - 1))) {
+                !isSimpleVowel(remainingText.charAt(remainingText.length() - 1))) {
             // Failed to extract a syllable from the tail.
             return "";
         }
@@ -2553,7 +2557,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
 
         // Look for the initial consonant.
         if (remainingText.length() < 1 ||
-            isSimpleVowel(remainingText.charAt(remainingText.length() - 1))) {
+                isSimpleVowel(remainingText.charAt(remainingText.length() - 1))) {
             // Also a failure.
             return "";
         }
@@ -2577,64 +2581,64 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
     }
 
     private static int getResIdForFallbackChar(char value) {
-        switch(value) {
-          case 'a':
-            return R.raw.audio_a;
-          case 'b':
-            return R.raw.audio_b;
-          case 'C': // {ch}
-            return R.raw.audio_c;
-          case 'D':
-            return R.raw.audio_d;
-          case 'e':
-            return R.raw.audio_e;
-          case 'G': // {gh}
-            return R.raw.audio_g;
-          case 'H':
-            return R.raw.audio_h;
-          case 'I':
-            return R.raw.audio_i;
-          case 'j':
-            return R.raw.audio_j;
-          case 'l':
-            return R.raw.audio_l;
-          case 'm':
-            return R.raw.audio_m;
-          case 'n':
-            return R.raw.audio_n;
-          case 'F': // {ng}
-            return R.raw.audio_f;
-          case 'o':
-            return R.raw.audio_o;
-          case 'p':
-            return R.raw.audio_p;
-          case 'q':
-            return R.raw.audio_q;
-          case 'Q':
-            return R.raw.audio_k;
-          case 'r':
-            return R.raw.audio_r;
-          case 'S':
-            return R.raw.audio_s;
-          case 't':
-            return R.raw.audio_t;
-          case 'x': // {tlh}
-            return R.raw.audio_x;
-          case 'u':
-            return R.raw.audio_u;
-          case 'v':
-            return R.raw.audio_v;
-          case 'w':
-            return R.raw.audio_w;
-          case 'y':
-            return R.raw.audio_y;
-          case 'z': // {'}
-            return R.raw.audio_z;
-          case ' ':
-            return R.raw.audio_silence;
-          default:
-            // Note that 0 denotes an invalid resource ID in Android.
-            return 0;
+        switch (value) {
+            case 'a':
+                return R.raw.audio_a;
+            case 'b':
+                return R.raw.audio_b;
+            case 'C': // {ch}
+                return R.raw.audio_c;
+            case 'D':
+                return R.raw.audio_d;
+            case 'e':
+                return R.raw.audio_e;
+            case 'G': // {gh}
+                return R.raw.audio_g;
+            case 'H':
+                return R.raw.audio_h;
+            case 'I':
+                return R.raw.audio_i;
+            case 'j':
+                return R.raw.audio_j;
+            case 'l':
+                return R.raw.audio_l;
+            case 'm':
+                return R.raw.audio_m;
+            case 'n':
+                return R.raw.audio_n;
+            case 'F': // {ng}
+                return R.raw.audio_f;
+            case 'o':
+                return R.raw.audio_o;
+            case 'p':
+                return R.raw.audio_p;
+            case 'q':
+                return R.raw.audio_q;
+            case 'Q':
+                return R.raw.audio_k;
+            case 'r':
+                return R.raw.audio_r;
+            case 'S':
+                return R.raw.audio_s;
+            case 't':
+                return R.raw.audio_t;
+            case 'x': // {tlh}
+                return R.raw.audio_x;
+            case 'u':
+                return R.raw.audio_u;
+            case 'v':
+                return R.raw.audio_v;
+            case 'w':
+                return R.raw.audio_w;
+            case 'y':
+                return R.raw.audio_y;
+            case 'z': // {'}
+                return R.raw.audio_z;
+            case ' ':
+                return R.raw.audio_silence;
+            default:
+                // Note that 0 denotes an invalid resource ID in Android.
+                return 0;
         }
     }
 
@@ -2644,11 +2648,11 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
      */
     private static String condenseKlingonDiTrigraphs(String input) {
         return input.replaceAll("[^A-Za-z'\\-]+", " ")  // Strip all non-alphabetical characters (except {'} and "-").
-                    .replaceAll("ch", "C")
-                    .replaceAll("gh", "G")   // {gh} has to be done before {ng} so that {ngh} -> "nG" and not "Fh".
-                    .replaceAll("ng", "F")
-                    .replaceAll("tlh", "x")
-                    .replaceAll("'", "z");
+                .replaceAll("ch", "C")
+                .replaceAll("gh", "G")   // {gh} has to be done before {ng} so that {ngh} -> "nG" and not "Fh".
+                .replaceAll("ng", "F")
+                .replaceAll("tlh", "x")
+                .replaceAll("'", "z");
     }
 
     /*
@@ -2656,10 +2660,10 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
      */
     private static String restoreKlingonDiTrigraphs(String input) {
         return input.replaceAll("'", "z")
-                    .replaceAll("tlh", "x")
-                    .replaceAll("ng", "F")
-                    .replaceAll("gh", "G")
-                    .replaceAll("ch", "C");
+                .replaceAll("tlh", "x")
+                .replaceAll("ng", "F")
+                .replaceAll("gh", "G")
+                .replaceAll("ch", "C");
     }
 
     private void beginPlayback() {
@@ -2676,10 +2680,10 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
 
         // Warn user if audio is mute (device is on silent or vibrate).
         AudioManager audioManager =
-            (AudioManager) getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
+                (AudioManager) getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
         if (audioManager.getStreamVolume(AudioManager.STREAM_MUSIC) == 0) {
             Toast.makeText(
-                this, getResources().getString(R.string.audio_is_mute), Toast.LENGTH_LONG).show();
+                    this, getResources().getString(R.string.audio_is_mute), Toast.LENGTH_LONG).show();
         }
 
         // This starts the chain of playback.
@@ -2707,7 +2711,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
         // Work-around for https://github.com/De7vID/klingon-assistant/issues/132.
         List<Voice> list = new ArrayList<Voice>();
         list.add(new Voice("Klingon (Canada)", new Locale("tlh", "CAN"), 100, 100, false,
-              new HashSet<String>()));
+                new HashSet<String>()));
         return list;
     }
 
@@ -2739,7 +2743,7 @@ public class KlingonSpeakTtsService extends TextToSpeechService implements andro
     public String onGetDefaultVoiceNameFor(String lang, String country, String variant) {
         // Work-around for https://github.com/De7vID/klingon-assistant/issues/132.
         if (lang.equals("tlh")) {
-          return "Klingon (Canada)";
+            return "Klingon (Canada)";
         }
         return super.onGetDefaultVoiceNameFor(lang, country, variant);
     }
