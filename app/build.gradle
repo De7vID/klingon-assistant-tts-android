@@ -6,13 +6,13 @@ keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
     namespace "org.tlhInganHol.android.klingonttsengine"
-    compileSdkVersion 33
+    compileSdkVersion 34
     defaultConfig {
         applicationId "org.tlhInganHol.android.klingonttsengine"
         // SDK 16 is needed for gapless playback using setNextMediaPlayer.
         // SDK 23 is not backwards compatible in terms of permissions.
         minSdkVersion 23
-        targetSdkVersion 33
+        targetSdkVersion 34
         versionCode 35
         versionName "2023.08.18"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
