@@ -13,8 +13,8 @@ android {
         // SDK 23 is not backwards compatible in terms of permissions.
         minSdkVersion 23
         targetSdkVersion 34
-        versionCode 36
-        versionName "2024.07.14"
+        versionCode 37
+        versionName "2024.08.20"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildFeatures {
